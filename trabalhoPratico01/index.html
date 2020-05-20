@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabalho prático 01</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <div class="row title">
+        <h1>Trabalho prático 01 - RGB Color</h1>
+      </div>
+      <div class="row">
+        <span>(R) Vermelho</span>
+        <input type="range" id="rangeR" min="0" max="255" value="0" />
+        <input type="text" id="inputR" disabled />
+      </div>
+      <div class="row">
+        <span>(G) Verde</span>
+        <input type="range" id="rangeG" min="0" max="255" value="0" />
+        <input type="text" id="inputG" disabled />
+      </div>
+      <div class="row">
+        <span>(B) Azul</span>
+        <input type="range" id="rangeB" min="0" max="255" value="0" />
+        <input type="text" id="inputB" disabled />
+      </div>
+      <div id="color"></div>
+      <div id="colorDivSpan">
+        <span id="colorSpan">rgb(0,0,0)</span>
+      </div>
+    </div>
+    <p class="credits">Desenvolvido por Felipe Panegalli - IGTI</p>
+    <script src="js/script.js"></script>
+  </body>
+</html>
