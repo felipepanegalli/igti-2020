@@ -10,6 +10,7 @@ function start() {
 }
 
 loadRadio = () => {
+  // Inicia o input range em 87,7 mhz
   inputRange.value = '87.7';
   inputFrequency.value = inputRange.value;
 };
