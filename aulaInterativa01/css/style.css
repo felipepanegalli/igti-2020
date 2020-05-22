@@ -1,0 +1,81 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: #193b68;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid rgba(20, 121, 255, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgb(20, 121, 255);
+  background-color: #fff;
+}
+
+.content h3 {
+  font-size: 2rem;
+}
+
+#divPodcast img {
+  height: 75px;
+  width: 75px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+#divPodcast {
+  padding: 20px;
+  margin: 20px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 5px 0 rgba(20, 121, 255, 0.2);
+  border-radius: 5px;
+  text-align: center;
+}
+
+#inputFrequency {
+  width: 80px;
+  text-align: center;
+}
+
+.divRange {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 0;
+  width: 80%;
+}
+
+.spanFrequency {
+  margin: 0 20px;
+  padding: 0;
+}
+
+#inputRange {
+  margin: 0;
+  width: 200px;
+}
+
+#inputRange::-webkit-slider-thumb {
+  background-color: #14a5ff;
+}
+
+#inputRange::-webkit-slider-runnable-track {
+  background-color: rgba(20, 121, 255, 0.2);
+}
+
+.thumb {
+  display: none;
+}

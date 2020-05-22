@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio Podcast</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h3>Rádio Podcast</h3>
+      <div>
+        <input type="text" name="inputFrequency" id="inputFrequency" disabled />
+        <span>MHz</span>
+      </div>
+      <div class="divRange">
+        <span class="spanFrequency">87.7 MHz</span>
+        <input
+          type="range"
+          name="inputRange"
+          id="inputRange"
+          min="87.7"
+          max="108.0"
+          step="0.1"
+        />
+        <span class="spanFrequency">108.0 MHz</span>
+      </div>
+      <div id="divPodcast">
+        <p>Nenhum Podcast</p>
+      </div>
+    </div>
+    <p class="credits">Desenvolvido por Felipe Panegalli - IGTI</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/podcasts.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
