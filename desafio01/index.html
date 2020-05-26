@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio 01 - Pesquisa de usuários</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pesquisa de Usuários</h1>
+      <div class="loader-container">
+        <div class="loader"></div>
+        <span>Carregando...</span>
+      </div>
+      <div class="searchDiv hide">
+        <input type="text" name="search" id="searchInput" placeholder="Busca" />
+        <button type="button" id="searchBtn">Buscar</button>
+      </div>
+      <div class="results hide">
+        <div class="col">
+          <h2><span id="usersFound"></span> Usuários encontrados</h2>
+          <div id="tabUsers"></div>
+        </div>
+        <div class="col">
+          <h2>Estatísticas</h2>
+          <p>Sexo masculino: <b id="maleSpan"></b></p>
+          <p>Sexo feminino: <b id="femaleSpan"></b></p>
+          <p>Soma das idades: <b id="sumAgeSpan"></b></p>
+          <p>Média das idades: <b id="avgAgeSpan"></b></p>
+          <hr />
+          <h3>Proporção de Gêneros</h3>
+          <div id="chart"></div>
+        </div>
+      </div>
+      <div class="results-none">
+        <div class="col">
+          <h2>Nenhum filtro aplicado.</h2>
+        </div>
+        <div class="col">
+          <h2>Nada a ser exibido</h2>
+        </div>
+      </div>
+      <p class="credits">Desenvolvido por Felipe Panegalli - IGTI</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
