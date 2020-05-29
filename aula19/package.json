@@ -1,0 +1,11 @@
+{
+  "name": "grades-control-api",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "repository": "https://github.com/felipepanegalli/igti-2020.git",
+  "author": "Felipe Panegalli <felipe.panegalli@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
