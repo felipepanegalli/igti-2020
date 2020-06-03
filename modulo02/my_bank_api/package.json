@@ -1,0 +1,17 @@
+{
+  "name": "my_bank_api",
+  "version": "1.0.0",
+  "author": {
+    "email": "felipe.panegalli@gmail.com",
+    "name": "Felipe Panegalli",
+    "url": "https://github.com/felipepanegalli/igti-2020"
+  },
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "main": "src/app.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
