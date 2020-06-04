@@ -1,33 +1,35 @@
-const express = require('express');
-const fs = require('fs');
+import express from 'express';
 const app = express();
 
-const accountDbPath = 'src/database/accounts.json';
+import cors from 'cors';
 
-// Rotas
-const accountRoute = require('./routes/accounts');
+import { promises } from 'fs';
+const readFile = promises.readFile;
+const writeFile = promises.writeFile;
+
+import accountRoute from './routes/accounts.js';
+import database from './configs/database.config.js';
+import logger from './configs/logger.config.js';
 
 // Confgs do express
 app.use(express.json());
+app.use(cors());
 app.use('/accounts', accountRoute);
 
 app.get('/', (req, res) => {
-  res.send('/');
+  return res.send('/');
 });
 
 // Servidor
-app.listen(3333, () => {
+app.listen(3333, async () => {
   try {
-    fs.readFile(accountDbPath, 'utf-8', (err, data) => {
-      if (err) {
-        const initAccount = {
-          nextId: 1,
-          accounts: [],
-        };
-        fs.writeFile(accountDbPath, JSON.stringify(initAccount), (err) => {});
-      }
-    });
+    await readFile(database.account, 'utf-8');
   } catch (error) {
-    console.log(error);
+    const initAccount = {
+      nextId: 1,
+      accounts: [],
+    };
+    writeFile(database.account, JSON.stringify(initAccount));
+    logger.info('Account Database Created.');
   }
 });

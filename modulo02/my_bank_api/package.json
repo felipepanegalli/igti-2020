@@ -7,11 +7,14 @@
     "url": "https://github.com/felipepanegalli/igti-2020"
   },
   "scripts": {
-    "start": "nodemon src/app.js"
+    "start": "nodemon --experimental-modules src/app.js"
   },
   "main": "src/app.js",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "winston": "^3.2.1"
+  },
+  "type": "module"
 }
