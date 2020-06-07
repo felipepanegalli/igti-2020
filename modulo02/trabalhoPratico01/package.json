@@ -1,0 +1,16 @@
+{
+  "name": "trabalho-pratico-01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Felipe Panegalli"
+  },
+  "scripts": {
+    "start": "nodemon --experimental-modules src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "type": "module"
+}
