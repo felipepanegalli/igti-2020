@@ -1,0 +1,27 @@
+const leftPad = (value, count = 2, char = '0') => {
+  const stringValue = value.toString();
+  let newValue = stringValue;
+
+  if (stringValue.length < count) {
+    for (let i = 0; i < count - stringValue.length; i++) {
+      newValue = char + newValue.toString();
+    }
+  }
+  return newValue;
+};
+
+const getNewTimestamp = () => {
+  const now = new Date();
+  let result = '';
+  result += leftPad(now.getDate());
+  result += '/' + leftPad(now.getMonth() + 1);
+  result += '/' + now.getFullYear();
+  result += ' ' + leftPad(now.getHours());
+  result += ':' + leftPad(now.getMinutes());
+  result += ':' + leftPad(now.getSeconds());
+  result += '.' + leftPad(now.getMilliseconds(), 3);
+
+  return result;
+};
+
+export { getNewTimestamp };
