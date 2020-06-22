@@ -1,0 +1,22 @@
+.border {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 10px;
+  display: flex;
+}
+
+.border_card {
+  border: 1px solid lightgray;
+  margin: 10px;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+}
+
+.dFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
