@@ -1,8 +1,9 @@
 import React from 'react';
 
 function DecrementButton(props) {
+  const { onDecrement } = props;
   const handleButtonClick = () => {
-    props.onDecrement('-');
+    onDecrement('-');
   };
   return (
     <button

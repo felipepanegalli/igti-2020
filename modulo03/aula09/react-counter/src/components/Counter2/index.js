@@ -6,11 +6,11 @@ import Value from './Value';
 import Steps from './Steps';
 
 function Counter2(props) {
-  const handleButtonClick = (clickType) => {
-    props.onCount(clickType);
-  };
+  const { currentCounter, currentStep, onCount } = props;
 
-  const { currentCounter, currentStep } = props;
+  const handleButtonClick = (clickType) => {
+    onCount(clickType);
+  };
 
   return (
     <div className={css.counterContainer}>

@@ -1,8 +1,9 @@
 import React from 'react';
 
 function IncrementButton(props) {
+  const { onIncrement } = props;
   const handleButtonClick = () => {
-    props.onIncrement('+');
+    onIncrement('+');
   };
   return (
     <button
