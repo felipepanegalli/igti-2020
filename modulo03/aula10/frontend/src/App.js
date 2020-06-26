@@ -6,13 +6,11 @@ import Candidates from './components/Candidates';
 export default class App extends Component {
   constructor() {
     super();
-
     this.state = {
       candidates: [],
       previousVotes: [],
       previousPercentages: [],
     };
-
     this.interval = null;
   }
 
@@ -26,13 +24,11 @@ export default class App extends Component {
           const previousVotes = this.state.candidates.map(({ id, votes }) => {
             return { id, votes };
           });
-
           const previousPercentages = this.state.candidates.map(
             ({ id, percentage }) => {
               return { id, percentage };
             }
           );
-
           this.setState({
             candidates: json.candidates,
             previousVotes,
@@ -46,15 +42,15 @@ export default class App extends Component {
     const { candidates, previousVotes, previousPercentages } = this.state;
 
     if (candidates.length === 0) {
-      return <Spinner description="Carregando..." />;
+      return <Spinner text="Carregando..." size="small" />;
     }
 
     return (
       <div className="container">
         <Header>Votação</Header>
         <Candidates
-          previousPercentages={previousPercentages}
           previousVotes={previousVotes}
+          previousPercentages={previousPercentages}
           candidates={candidates}
         />
       </div>

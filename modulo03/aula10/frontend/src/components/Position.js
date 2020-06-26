@@ -1,7 +1,15 @@
 import React from 'react';
 
-import css from './position.module.css';
-
 export default function Position({ children }) {
-  return <div className={css.position}>{children}</div>;
+  const { textStyle } = styles;
+
+  return <div style={textStyle}>{children}</div>;
 }
+
+const styles = {
+  textStyle: {
+    marginRight: '15px',
+    fontWeight: 'bold',
+    fontSize: '1.2rem',
+  },
+};

@@ -1,8 +1,7 @@
 import React from 'react';
-import FlipMove from 'react-flip-move';
-
 import Card from './Card';
 import Candidate from './Candidate';
+import FlipMove from 'react-flip-move';
 
 export default function Candidates({
   candidates,
@@ -39,7 +38,7 @@ export default function Candidates({
                   previousPercentage={previousPercentage}
                   candidate={candidate}
                   position={index + 1}
-                />
+                ></Candidate>
               </Card>
             </div>
           );

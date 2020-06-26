@@ -1,12 +1,11 @@
 import React from 'react';
 
-import css from './spinner.module.css';
-
-export default function Spinner({ description }) {
+export default function Spinner({ size, text }) {
+  const { mt20, textStyle } = styles;
   return (
-    <div className={css.flexRow}>
-      <div className="preloader-wrapper small active">
-        <div className="spinner-layer spinner-blue-only">
+    <div className="center" style={mt20}>
+      <div className={'preloader-wrapper ' + size + ' active'}>
+        <div className="spinner-layer spinner-blue">
           <div className="circle-clipper left">
             <div className="circle"></div>
           </div>
@@ -18,7 +17,17 @@ export default function Spinner({ description }) {
           </div>
         </div>
       </div>
-      <div style={{ fontSize: '2rem', marginLeft: '10px' }}>{description}</div>
+      <br />
+      <span style={textStyle}>{text}</span>
     </div>
   );
 }
+
+const styles = {
+  mt20: {
+    margin: '20px 0 0 0',
+  },
+  textStyle: {
+    fontSize: '1.5rem',
+  },
+};

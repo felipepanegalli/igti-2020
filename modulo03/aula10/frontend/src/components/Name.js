@@ -1,5 +1,13 @@
 import React from 'react';
 
 export default function Name({ children }) {
-  return <div style={{ fontWeight: 'bold' }}>{children}</div>;
+  const { textStyle } = styles;
+
+  return <div style={textStyle}>{children}</div>;
 }
+
+const styles = {
+  textStyle: {
+    fontWeight: 'bold',
+  },
+};
