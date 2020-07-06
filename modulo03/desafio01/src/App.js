@@ -3,7 +3,12 @@ import InputText from './components/InputText';
 import Block from './components/Block';
 
 export default function App() {
-  const { flexStyle, containerFlexStyle } = styles;
+  const {
+    flexStyle,
+    containerFlexStyle,
+    customStyle,
+    textCustomStyle,
+  } = styles;
   const [initialValue, setInitialValue] = useState(1000);
   const [monthRate, setMonthRate] = useState(0.5);
   const [period, setPeriod] = useState(15);
@@ -45,7 +50,7 @@ export default function App() {
   }, [initialValue, monthRate, period]);
 
   return (
-    <div className="container">
+    <div className="container" style={customStyle}>
       <h3 className="center">React - Juros Compostos</h3>
       <br />
       <div style={flexStyle}>
@@ -83,6 +88,9 @@ export default function App() {
           />
         ))}
       </div>
+      <div className="center blue-grey-text" style={textCustomStyle}>
+        <p>Desenvolvido por Felipe Panegalli</p>
+      </div>
     </div>
   );
 }
@@ -99,5 +107,15 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'flex-start',
     flexWrap: 'wrap',
+  },
+  textCustomStyle: {
+    fontWeight: 'bold',
+    fontSize: '1.2rem',
+  },
+  customStyle: {
+    backgroundColor: '#FFFFFF',
+    padding: '30px',
+    borderRadius: '10px',
+    boxShadow: '0 0 2px 1px rgba(0, 0, 0, 0.3)',
   },
 };
