@@ -22,6 +22,10 @@ dotenv.config();
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Pasta /');
+});
+
 app.listen(process.env.PORT, () => {
   console.log('Servidor em execução');
 });
