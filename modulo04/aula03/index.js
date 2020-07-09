@@ -23,7 +23,7 @@ dotenv.config();
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Route /');
+  res.send('Route / ');
 });
 
 app.listen(process.env.PORT, () => {
