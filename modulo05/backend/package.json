@@ -1,8 +1,15 @@
 {
-  "name": "bootcamp-full-stack-desafio-final",
+  "name": "backend",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "license": "MIT",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "cors": "2.8.5",
     "dotenv": "8.2.0",
@@ -13,15 +20,5 @@
   },
   "devDependencies": {
     "nodemon": "2.0.4"
-  },
-  "scripts": {
-    "server": "nodemon index.js",
-    "start": "node index.js",
-    "heroku-postbuild": "cd ../frontend && npm install && npm run build"
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "client/"
-    ]
   }
 }
